@@ -70,10 +70,8 @@ h1, h2, h3, h4, h5 {
 	margin: 0 auto;
 }
 header{
-	padding-top: 20px;
-}
-header{
 	display: flex;
+  padding-top: 20px;
 }
 header > img{
 	margin-left: 100px;
@@ -177,4 +175,72 @@ footer{
 }
 footer p{
 	text-align: center;
+  margin-top: 40px;
+}
+
+
+/*==========================================================
+MEDIA QUERIES
+==========================================================*/
+
+@media (max-width: 768px) {
+  .container{
+    padding: 0 4px;
+  }
+  header{
+  	flex-direction: column-reverse;
+  }
+  header > img{
+  	margin: 0 auto 4% auto;
+    width: 200px;
+    height: auto;
+  }
+  nav{
+    padding: 0 10%;
+  }
+
+  #box > img{
+    display: none;
+  }
+
+  .middle-img{
+    width: 100%;
+    height: auto;
+  }
+}/*end of tablet media query*/
+@media (max-width: 680px) {
+  header{
+    flex-direction: column-reverse;
+  }
+  nav a{
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+  }
+  nav a:first-child{
+    border-top: 1px solid #000;
+  }
+  nav a:nth-child(even){
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+  button{
+    margin-left: 10px;
+  }
+  #features-about-container{
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+  }
+  #features-about-container section:first-child{
+    margin-bottom: 40px;
+  }
+  #Services-product-vision-container{
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+  }
+  #Services-product-vision-container section:nth-child(2){
+    margin: 40px 0;
+  }
 }
